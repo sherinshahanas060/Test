@@ -35,5 +35,7 @@ workflows:
           bundle-key: Demo-httpd/
           deployment-group: DgpECS-Demo-HTTPD
           deployment-config: CodeDeployDefault.ECSAllAtOnce
-          arguments:ignore-hidden-files;
+          push-bundle:
+            parameters:
+               arguments:ignore-hidden-files
           service-role-arn: arn:aws:iam::565687073766:role/ecsCodeDeployRole   
