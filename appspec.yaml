@@ -1,0 +1,17 @@
+{
+  "version": 0.0,
+  "Resources": [
+    {
+      "TargetService": {
+        "Type": "AWS::ECS::Service",
+        "Properties": {
+          "TaskDefinition": "arn:aws:ecs:eu-west-1:565687073766:task-definition/httpd:1",
+          "LoadBalancerInfo": {
+            "ContainerName": "httpd",
+            "ContainerPort": 80
+          }
+        }
+      }
+    }
+  ]
+}
