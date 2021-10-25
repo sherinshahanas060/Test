@@ -3,6 +3,7 @@
 version: 2.1
 orbs:
   aws-ecr: circleci/aws-ecr@6.15
+  aws-ecs: circleci/aws-ecs@2.0.0
   aws-code-deploy: circleci/aws-code-deploy@2.0.0
 
 # Define a job to be invoked later in a workflow.
@@ -34,3 +35,4 @@ workflows:
           bundle-key: Demo-httpd/
           deployment-group: DgpECS-Demo-HTTPD
           service-role-arn: arn:aws:iam::565687073766:role/ecsCodeDeployRole   
+
